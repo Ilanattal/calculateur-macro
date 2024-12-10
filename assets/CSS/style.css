@@ -9,7 +9,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
 }
 
 /* Conteneur principal */
@@ -28,32 +27,36 @@ h1 {
     margin-bottom: 20px;
     color: #ceeece;
     text-align: center;
-    /* margin-top: 100px; */
 }
 
+/* Formulaire */
 /* Formulaire */
 form {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 20px;
+    width: 50%; /* Assurer que le formulaire occupe toute la largeur */
 }
 
-form input[type="text"], 
+/* Champs de texte et de numéro */
+form input[type="text"],
 form input[type="number"] {
-    flex: 1;
+    width: 100%; /* Remplir toute la largeur disponible */
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
-    width: 93%;
+    box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
 }
 
-label{
+/* Labels */
+label {
     color: #ceeece;
+    font-size: 14px;
 }
 
+/* Bouton */
 form button {
     background-color: #29a19c;
     color: #ceeece;
@@ -64,7 +67,6 @@ form button {
     transition: background-color 0.3s;
     width: 100%;
 }
-
 form button:hover {
     background-color: #239448;
 }
@@ -89,6 +91,7 @@ form button:hover {
     display: flex;
     justify-content: space-between; /* Espacement entre le texte et les autres éléments */
     align-items: center;
+    text-align: center;
     position: relative; /* Nécessaire pour positionner la croix */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce pour de la profondeur */
     transition: all 0.3s ease; /* Transition fluide lors de l'interaction */
@@ -111,10 +114,9 @@ form button:hover {
     color: #ff6347; /* Change la couleur au survol pour un effet interactif */
 }
 
-h2{
+h2 {
     color: #ceeece;
-    }
-    
+}
 
 /* Résultats */
 #results {
@@ -132,7 +134,6 @@ h2{
     margin-bottom: 15px;
     color: #ceeece;
 }
-
 
 #results p {
     margin: 0 10px; /* Marge horizontale entre les éléments */
@@ -156,14 +157,11 @@ h2{
     transform: translateY(-2px); /* Légère élévation pour un effet 3D */
 }
 
-
-
-
-
 /* Bouton calcul */
 #calculate {
     display: block;
     width: 100%;
+    max-width: 50%;
     background-color: #29a19c;
     color: #ceeece;
     padding: 10px 15px;
@@ -173,9 +171,74 @@ h2{
     cursor: pointer;
     margin-top: 20px;
     transition: background-color 0.3s;
-    width: 27%;
 }
 
 #calculate:hover {
     background-color: #5d8249;
+}
+
+/* Adaptations pour les écrans plus petits */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Réduire la marge interne */
+    }
+
+    h1 {
+        font-size: 20px; /* Réduire la taille du titre sur mobile */
+    }
+
+    form input[type="text"], 
+    form input[type="number"] {
+        width: 100%; /* Les champs de formulaire prennent toute la largeur */
+    }
+
+    #ingredient-list li {
+        padding: 10px 15px; /* Réduire l'espace interne des éléments */
+        font-size: 14px; /* Réduire la taille du texte */
+        text-align: center; /* Centre le texte horizontalement */
+        display: flex; /* Activer Flexbox */
+        justify-content: center; /* Centrer le contenu horizontalement */
+        align-items: center; /* Centrer le contenu verticalement */
+        background: #29a19c; /* Fond clair */
+        border-radius: 8px; /* Coins plus arrondis */
+        color: #ceeece; /* Couleur du texte */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+        width: 100%;
+    }
+    
+    #results p {
+        font-size: 14px; /* Réduire la taille du texte des résultats */
+        padding: 8px 15px; /* Réduire l'espace interne */
+    }
+
+    #calculate {
+        width: 100%; /* Le bouton occupe toute la largeur */
+    }
+}
+
+/* Adaptations pour les petits écrans mobiles */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px; /* Réduire encore la taille du titre */
+    }
+
+    form {
+        gap: 10px; /* Réduire l'écart entre les champs du formulaire */
+        width: 80%;
+    }
+
+    #ingredient-list {
+        gap: 10px; /* Réduire l'écart entre les ingrédients */
+        width: 80%;
+    }
+
+    #ingredient-list li {
+        font-size: 12px; /* Réduire la taille du texte */
+    }
+
+    #results p {
+        font-size: 12px; /* Réduire la taille du texte des résultats */
+        padding: 6px 12px; /* Réduire l'espace interne */
+        text-align: center;
+    }
 }
