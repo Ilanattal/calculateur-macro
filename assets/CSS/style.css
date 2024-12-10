@@ -1,0 +1,181 @@
+/* Général */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #435055;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+/* Conteneur principal */
+.container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Titre */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ceeece;
+    text-align: center;
+    /* margin-top: 100px; */
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+form input[type="text"], 
+form input[type="number"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 93%;
+}
+
+label{
+    color: #ceeece;
+}
+
+form button {
+    background-color: #29a19c;
+    color: #ceeece;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #239448;
+}
+
+/* Liste des ingrédients */
+#ingredient-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    gap: 20px;
+}
+
+#ingredient-list li {
+    background: #29a19c; /* Fond clair */
+    border-radius: 8px; /* Coins plus arrondis pour un effet plus doux */
+    padding: 12px 20px; /* Plus d'espace interne pour rendre les éléments plus lisibles */
+    color: #ceeece;
+    margin-bottom: 10px; /* Un peu plus d'espace entre les éléments */
+    display: flex;
+    justify-content: space-between; /* Espacement entre le texte et les autres éléments */
+    align-items: center;
+    position: relative; /* Nécessaire pour positionner la croix */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce pour de la profondeur */
+    transition: all 0.3s ease; /* Transition fluide lors de l'interaction */
+    font-family: 'Arial', sans-serif; /* Police moderne et propre */
+}
+
+.delete-item {
+    position: absolute; /* Permet de positionner la croix précisément */
+    top: -10px; /* Décalage de 5px depuis le haut */
+    right: -5px; /* Décalage de 5px depuis la droite */
+    font-size: 20px; /* Taille de la croix */
+    cursor: pointer; /* Change le curseur pour indiquer qu'on peut cliquer */
+    color: #fff; /* Blanc pour la croix */
+    background: transparent; /* Pas de fond */
+    border: none; /* Pas de bordure */
+    padding: 0; /* Aucune marge */
+}
+
+.delete-item:hover {
+    color: #ff6347; /* Change la couleur au survol pour un effet interactif */
+}
+
+h2{
+    color: #ceeece;
+    }
+    
+
+/* Résultats */
+#results {
+    background: #435055;
+    border-radius: 5px;
+    padding: 20px;
+    white-space: nowrap; /* Empêche les éléments de passer à la ligne suivante */
+    overflow: hidden; /* Empêche le débordement si le contenu dépasse */
+    width: 100%;
+    text-align: center;
+}
+
+#results h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ceeece;
+}
+
+
+#results p {
+    margin: 0 10px; /* Marge horizontale entre les éléments */
+    font-size: 16px;
+    color: #ceeece;
+    display: inline-block; /* Affichage en ligne */
+    background-color: #fff; /* Fond blanc pour chaque <p> */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px 20px; /* Espacement interne pour plus de lisibilité */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée douce pour l'effet de profondeur */
+    transition: all 0.3s ease; /* Transition douce pour les effets */
+    font-family: 'Arial', sans-serif; /* Police plus moderne */
+    background-color: #29a19c;
+}
+
+/* Effet au survol (hover) */
+#results p:hover {
+    background-color: #2e8b57; /* Changer la couleur de fond au survol */
+    color: white; /* Texte en blanc */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+    transform: translateY(-2px); /* Légère élévation pour un effet 3D */
+}
+
+
+
+
+
+/* Bouton calcul */
+#calculate {
+    display: block;
+    width: 100%;
+    background-color: #29a19c;
+    color: #ceeece;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    width: 27%;
+}
+
+#calculate:hover {
+    background-color: #5d8249;
+}

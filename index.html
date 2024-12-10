@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de Valeurs Nutritives</title>
+    <script src="assets/JS/app.js" defer ></script>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+<body>
+    <img src="images/logoo.png" alt="">
+
+    <h1>Calculateur de Valeurs Nutritives</h1>
+    <form id="recipe-form">
+        <div>
+            <label for="ingredient">Ingrédient :</label>
+            <input type="text" id="ingredient" list="ingredients-list">
+            <datalist id="ingredients-list"></datalist>
+        </div>
+        <div>
+            <label for="quantity">Quantité (en g ou mL) :</label>
+            <input type="number" id="quantity" required>
+        </div>
+        <button type="button" id="add-ingredient">Ajouter l'ingrédient</button>
+    </form>
+
+    <h2>Ingrédients Ajoutés</h2>
+    <ul id="ingredient-list">
+    </ul>
+
+    <button id="calculate">Calculer</button>
+
+    <h2>Résultats</h2>
+    <div id="results">
+        <p>Calories : <span id="calories">0</span></p>
+        <p>Protéines : <span id="proteins">0</span></p>
+        <p>Lipides : <span id="fats">0</span></p>
+        <p>Glucides : <span id="carbs">0</span></p>
+        <p>Prix : <span id="price">0</span> ₪</p>
+    </div>
+
+
+</body>
+</html>
