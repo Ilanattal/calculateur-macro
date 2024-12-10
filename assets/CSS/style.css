@@ -123,10 +123,14 @@ h2 {
     background: #435055;
     border-radius: 5px;
     padding: 20px;
-    white-space: nowrap; /* Empêche les éléments de passer à la ligne suivante */
-    overflow: hidden; /* Empêche le débordement si le contenu dépasse */
+    white-space: nowrap;
+    overflow: hidden;
     width: 100%;
+    max-width: 750px; /* Ajout d'une largeur maximale pour un meilleur rendu */
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 #results h2 {
@@ -236,9 +240,13 @@ h2 {
         font-size: 12px; /* Réduire la taille du texte */
     }
 
+    #results {
+        flex-direction: column; /* Affiche les éléments en colonne */
+        align-items: center; /* Centre les éléments en colonne */
+    }
+
     #results p {
-        font-size: 12px; /* Réduire la taille du texte des résultats */
-        padding: 6px 12px; /* Réduire l'espace interne */
-        text-align: center;
+        width: 100%; /* Chaque paragraphe prend toute la largeur */
+        max-width: 300px; /* Optionnel : limite la largeur des <p> */
     }
 }
